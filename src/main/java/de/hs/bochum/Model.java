@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -81,10 +82,20 @@ public class Model {
 		
 	}
 
+	public boolean loescheMessung(int id) throws Exception {
+		HttpDelete post = new HttpDelete("http://localhost:8080/api/v1/messung/"+id);
+		HttpResponse response = httpClient.execute(post);
+		if (response.getStatusLine().getStatusCode() != 200)
+			throw new Exception("Failed : HTTP error code : " + response.getStatusLine().getStatusCode()+"\n"+response.getEntity().getContent());
+		return true;
+	}
 	private Messreihe unmarshallMessreihe(HttpResponse response)
 			throws IOException, JsonParseException, JsonMappingException {
 		return  objectMapper.readValue(response.getEntity().getContent(),Messreihe.class);
 	}
+
+
+	
 
 	
 

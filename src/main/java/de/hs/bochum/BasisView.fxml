@@ -32,13 +32,13 @@
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-                <TableView fx:id="tblMessreihen" layoutX="20.0" layoutY="210.0" prefHeight="210.0" prefWidth="720.0">
+                <TableView fx:id="tblMessreihen" layoutX="20.0" layoutY="210.0" prefHeight="210.0" prefWidth="720.0" onKeyPressed="#onDeletePressed">
                     <columns>
-                        <TableColumn fx:id="clmnIdentnummer" prefWidth="130.0" text="Identnummer" />
-                        <TableColumn fx:id="clmnZeitintervall" prefWidth="130.0" text="Zeitintervall" />
+                        <TableColumn fx:id="clmnIdentnummer" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="clmnZeitintervall" prefWidth="50" text="Intervall" />
                         <TableColumn fx:id="clmnVerbraucher" prefWidth="130.0" text="Verbraucher" />
                         <TableColumn fx:id="clmnMessgroesse" prefWidth="130.0" text="Messsgröße" />
-                        <TableColumn fx:id="clmnMessungen" prefWidth="200.0" text="Messungen" />
+                        <TableColumn fx:id="clmnMessungen" prefWidth="360.0" text="Messungen" />
                     </columns>
                 </TableView>
                 <Button layoutX="220.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Messreihe starten" onAction="#starteMessreihe" fx:id="btnStarteMessreihe" />

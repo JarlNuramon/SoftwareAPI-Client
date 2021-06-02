@@ -18,6 +18,6 @@ public class Messung {
 	private double wert;
 
 	public String gibAttributeAus(){
-		return this.laufendeNummer + " " + this.wert;
+		return this.laufendeNummer + ": " + this.wert;
 	}
 }
