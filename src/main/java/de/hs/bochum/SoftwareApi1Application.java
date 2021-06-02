@@ -18,6 +18,7 @@ public class SoftwareApi1Application extends Application {
 		try {
 			 Parent root = FXMLLoader.load(this.getClass().getResource("/de/hs/bochum/BasisView.fxml"));
 		        primaryStage.setScene(new Scene(root));
+		        primaryStage.setTitle("EMU-Client von Saied Sadegh");
 		        primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();

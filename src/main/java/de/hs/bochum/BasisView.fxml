@@ -14,7 +14,7 @@
             <children>
                 <Label layoutX="20.0" layoutY="20.0" text="Eingabe einer Messreihe">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
                 <Label layoutX="20.0" layoutY="70.0" text="Identnummer der Messreihe" />
@@ -29,7 +29,7 @@
 
                 <Label layoutX="20.0" layoutY="160.0" text="Anzeige der Messreihe">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
                 <TableView fx:id="tblMessreihen" layoutX="20.0" layoutY="210.0" prefHeight="210.0" prefWidth="720.0">
